@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>shopping-cart</title>
+    <link href='https://fonts.googleapis.com/css?family=Nanum+Gothic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <nav class="navbar navbar-light bg-light fixed-top">
+        <a class="navbar-brand" href="shopping.html">
+            <i class="fas fa-heart text-info"></i> 彬彬血拼買買賣賣
+        </a>
+        <!-- 購物車內的數量 (Button 內包含 icon, 數量 badge) -->
+        <div class="dropdown ml-auto ">
+            <button class="btn btn-sm btn-cart" data-toggle="dropdown" data-flip="false">
+          <i class="fa fa-shopping-cart text-dark fa-2x" aria-hidden="true"></i>
+          <span class="badge badge-pill badge-danger">9</span>
+          <span class="sr-only"></span>
+        </button>
+
+            <div class="dropdown-menu dropdown-menu-right" style="min-width: 300px" data-offset="400">
+                <div class="px-4 py-3">
+                    <h6>已選擇商品</h6>
+                    <table class="table table-sm">
+                        <tbody>
+                            <tr>
+                                <td class="align-middle text-center">
+                                    <a href="#removeModal" class="text-muted" data-toggle="modal" data-target="#delModal" data-title="刪除 金牌西裝 1 件">
+                                        <i class="fa fa-trash-o" aria-hidden="true"></i>
+                                    </a>
+                                </td>
+                                <td class="align-middle">金牌西裝</td>
+                                <td class="align-middle">1 件</td>
+                                <td class="align-middle text-right">$520</td>
+                            </tr>
+                            <tr>
+                                <td class="align-middle text-center">
+                                    <a href="#removeModal" class="text-muted" data-toggle="modal" data-target="#delModal" data-title="刪除 金牌女裝 1 件">
+                                        <i class="fa fa-trash-o" aria-hidden="true"></i>
+                                    </a>
+                                </td>
+                                <td class="align-middle">金牌女裝</td>
+                                <td class="align-middle">1 件</td>
+                                <td class="align-middle text-right">$480</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <a href="shopping-check.html" class="btn btn-primary btn-block ">
+              結帳去
+            </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="jumbotron jumbotron-fluid jumbotron-bg d-flex align-items-end">
+        <div class="container">
+            <div class="bg-lighter p-3">
+                <h1 class="display-3 font-weight-bold text-monospace">
+                    買到剁手手！最後出清
+                </h1>
+                <p class="lead">
+                    This is a modified jumbotron that occupies the entire horizontal space of its parent.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="list-group sticky-top">
+                    <a href="#goldtop" class="list-group-item list-group-item-action active" data-toggle="list" role="tab">
+                        <i class="fas fa-donate"></i>金牌專賣店
+                    </a>
+                    <a href="#gift" class="list-group-item list-group-item-action" data-toggle="list" role="tab"><i class="fas fa-gift"></i>禮品區</a
+            >
+            <a
+              href="#film"
+              class="list-group-item list-group-item-action"
+              data-toggle="list"
+              role="tab"
+              ><i class="fas fa-film"></i>影音商品</a
+            >
+            <a
+              href="#paw"
+              class="list-group-item list-group-item-action"
+              data-toggle="list"
+              role="tab"
+              ><i class="fas fa-paw"></i>寵物專用</a
+            >
+            <a
+              href="#home"
+              class="list-group-item list-group-item-action"
+              data-toggle="list"
+              role="tab"
+              ><i class="fas fa-home"></i>居家專用</a
+            >
+          </div>
+        </div>
+        <div class="col-md-9">
+          <div class="tab-content">
+            <div class="tab-pane active" id="goldtop" role="tabpanel">
+
+                <form class="form-inline my-2 my-lg-0 ">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-warning my-2 my-sm-0" type="submit">Search</button>
+                  </form>
+
+              <div class="row mt-4">
+                <div class="col-md-4 mb-4">
+                  <div class="card border-0 box-shadow text-center h-100">
+                    <a href="products.html">
+                        <img
+                        src="https://images.unsplash.com/photo-1551488831-68b4d0c92c13?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                        class="card-img-top"
+                        alt="..."
+                      />
+                    </a>
+
+                    <div class="card-body">
+                        <h5 class="card-title">金牌西裝</h5>
+                        <p class="card-text">
+                            This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                        </p>
+                    </div>
+                    <div class="card-footer border-top-0 bg-white">
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                            <a href="#" class="btn btn-outline-secondary">
+                          SM
+                        </a>
+                            <a href="#" class="btn btn-outline-secondary">
+                          S
+                        </a>
+                            <a href="#" class="btn btn-outline-secondary">
+                          L
+                        </a>
+                            <a href="#" class="btn btn-outline-secondary">
+                          XL
+                        </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card border-0 box-shadow text-center h-100">
+                    <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" class="card-img-top" alt="..." />
+                    <div class="card-body">
+                        <h5 class="card-title">金牌女裝</h5>
+                        <p class="card-text">
+                            This card has supporting text below as a natural lead-in to additional content.
+                        </p>
+                    </div>
+                    <div class="card-footer border-top-0 bg-white">
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                            <a href="#" class="btn btn-outline-secondary">
+                          SM
+                        </a>
+                            <a href="#" class="btn btn-outline-secondary">
+                          S
+                        </a>
+                            <a href="#" class="btn btn-outline-secondary">
+                          L
+                        </a>
+                            <a href="#" class="btn btn-outline-secondary">
+                          XL
+                        </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card border-0 box-shadow text-center h-100">
+                    <img src="https://images.unsplash.com/photo-1532377394423-f5e9ce8c3511?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="card-img-top" alt="..." />
+                    <div class="card-body">
+                        <h5 class="card-title">特工眼鏡</h5>
+                        <p class="card-text">
+                            This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.
+                        </p>
+                    </div>
+                    <div class="card-footer border-top-0 bg-white">
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                            <a href="#" class="btn btn-outline-secondary btn-block">
+                          搶購去
+                        </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card border-0 box-shadow text-center h-100">
+                    <img src="https://images.unsplash.com/photo-1521335629791-ce4aec67dd15?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" class="card-img-top" alt="..." />
+                    <div class="card-body">
+                        <h5 class="card-title">金牌服飾</h5>
+                        <p class="card-text">
+                            This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.
+                        </p>
+                    </div>
+                    <div class="card-footer border-top-0 bg-white">
+                        <div class="btn-group" role="group" aria-label="Basic example" aria-disabled="true">
+                            <a href="#" class="btn btn-outline-secondary">
+                          SM
+                        </a>
+                            <a href="#" class="btn btn-outline-secondary disabled">
+                          S
+                        </a>
+                            <a href="#" class="btn btn-outline-secondary">
+                          L
+                        </a>
+                            <a href="#" class="btn btn-outline-secondary disabled">
+                          XL
+                        </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card border-0 box-shadow text-center h-100">
+                    <img src="https://images.unsplash.com/photo-1496950866446-3253e1470e8e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" class="card-img-top" alt="..." />
+                    <div class="card-body">
+                        <h5 class="card-title">特工飾品</h5>
+                        <p class="card-text">
+                            This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.
+                        </p>
+                    </div>
+                    <div class="card-footer border-top-0 bg-white">
+                        <div class="btn-group" role="group" aria-label="Basic example" aria-disabled="true">
+                            <a href="#" class="btn btn-outline-secondary disabled">
+                          缺貨中!
+                        </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane" id="gift" role="tabpanel">
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card border-0 box-shadow text-center h-100">
+                    <img src="https://images.unsplash.com/photo-1451290173668-9a14beaf714c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1357&q=80" class="card-img-top" alt="..." />
+                    <div class="card-body">
+                        <h5 class="card-title">禮品西裝</h5>
+                        <p class="card-text">
+                            This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                        </p>
+                    </div>
+                    <div class="card-footer border-top-0 bg-white">
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                            <a href="#" class="btn btn-outline-secondary">
+                SM
+              </a>
+                            <a href="#" class="btn btn-outline-secondary">
+                S
+              </a>
+                            <a href="#" class="btn btn-outline-secondary">
+                L
+              </a>
+                            <a href="#" class="btn btn-outline-secondary">
+                XL
+              </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card border-0 box-shadow text-center h-100">
+                    <img src="https://images.unsplash.com/photo-1512909006721-3d6018887383?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" class="card-img-top" alt="..." />
+                    <div class="card-body">
+                        <h5 class="card-title">禮品女裝</h5>
+                        <p class="card-text">
+                            This card has supporting text below as a natural lead-in to additional content.
+                        </p>
+                    </div>
+                    <div class="card-footer border-top-0 bg-white">
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                            <a href="#" class="btn btn-outline-secondary">
+                SM
+              </a>
+                            <a href="#" class="btn btn-outline-secondary">
+                S
+              </a>
+                            <a href="#" class="btn btn-outline-secondary">
+                L
+              </a>
+                            <a href="#" class="btn btn-outline-secondary">
+                XL
+              </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card border-0 box-shadow text-center h-100">
+                    <img src="https://images.unsplash.com/photo-1569573773030-b2a2984acec4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" class="card-img-top" alt="..." />
+                    <div class="card-body">
+                        <h5 class="card-title">禮品眼鏡</h5>
+                        <p class="card-text">
+                            This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.
+                        </p>
+                    </div>
+                    <div class="card-footer border-top-0 bg-white">
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                            <a href="#" class="btn btn-outline-secondary btn-block">
+                搶購去
+              </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card border-0 box-shadow text-center h-100">
+                    <img src="https://images.unsplash.com/photo-1510828325835-5940110b482a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1014&q=80" class="card-img-top" alt="..." />
+                    <div class="card-body">
+                        <h5 class="card-title">禮品服飾</h5>
+                        <p class="card-text">
+                            This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.
+                        </p>
+                    </div>
+                    <div class="card-footer border-top-0 bg-white">
+                        <div class="btn-group" role="group" aria-label="Basic example" aria-disabled="true">
+                            <a href="#" class="btn btn-outline-secondary">
+                SM
+              </a>
+                            <a href="#" class="btn btn-outline-secondary disabled">
+                S
+              </a>
+                            <a href="#" class="btn btn-outline-secondary">
+                L
+              </a>
+                            <a href="#" class="btn btn-outline-secondary disabled">
+                XL
+              </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card border-0 box-shadow text-center h-100">
+                    <img src="https://images.unsplash.com/photo-1545785028-23ee5937cf69?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" class="card-img-top" alt="..." />
+                    <div class="card-body">
+                        <h5 class="card-title">禮品飾品</h5>
+                        <p class="card-text">
+                            This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.
+                        </p>
+                    </div>
+                    <div class="card-footer border-top-0 bg-white">
+                        <div class="btn-group" role="group" aria-label="Basic example" aria-disabled="true">
+                            <a href="#" class="btn btn-outline-secondary disabled">
+                缺貨中!
+              </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane" id="film" role="tabpanel">
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card border-0 box-shadow text-center h-100">
+                    <img src="https://images.unsplash.com/photo-1462926795244-b273f8a5454f?ixlib=rb-1.2.1&auto=format&fit=crop&w=909&q=80" class="card-img-top" alt="..." />
+                    <div class="card-body">
+                        <h5 class="card-title">影音科技</h5>
+                        <p class="card-text">
+                            This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                        </p>
+                    </div>
+                    <div class="card-footer border-top-0 bg-white">
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                            <a href="#" class="btn btn-outline-secondary">
+                  SM
+                </a>
+                            <a href="#" class="btn btn-outline-secondary">
+                  S
+                </a>
+                            <a href="#" class="btn btn-outline-secondary">
+                  L
+                </a>
+                            <a href="#" class="btn btn-outline-secondary">
+                  XL
+                </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card border-0 box-shadow text-center h-100">
+                    <img src="https://images.unsplash.com/photo-1563663890276-e22733ca4bcc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" class="card-img-top" alt="..." />
+                    <div class="card-body">
+                        <h5 class="card-title">影音女孩</h5>
+                        <p class="card-text">
+                            This card has supporting text below as a natural lead-in to additional content.
+                        </p>
+                    </div>
+                    <div class="card-footer border-top-0 bg-white">
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                            <a href="#" class="btn btn-outline-secondary">
+                  SM
+                </a>
+                            <a href="#" class="btn btn-outline-secondary">
+                  S
+                </a>
+                            <a href="#" class="btn btn-outline-secondary">
+                  L
+                </a>
+                            <a href="#" class="btn btn-outline-secondary">
+                  XL
+                </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card border-0 box-shadow text-center h-100">
+                    <img src="https://images.unsplash.com/photo-1532456164788-984c62717cf8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80" class="card-img-top" alt="..." />
+                    <div class="card-body">
+                        <h5 class="card-title">影音手機</h5>
+                        <p class="card-text">
+                            This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.
+                        </p>
+                    </div>
+                    <div class="card-footer border-top-0 bg-white">
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                            <a href="#" class="btn btn-outline-secondary btn-block">
+                  搶購去
+                </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card border-0 box-shadow text-center h-100">
+                    <img src="https://images.unsplash.com/photo-1497015289639-54688650d173?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1489&q=80" class="card-img-top" alt="..." />
+                    <div class="card-body">
+                        <h5 class="card-title">影音世代</h5>
+                        <p class="card-text">
+                            This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.
+                        </p>
+                    </div>
+                    <div class="card-footer border-top-0 bg-white">
+                        <div class="btn-group" role="group" aria-label="Basic example" aria-disabled="true">
+                            <a href="#" class="btn btn-outline-secondary">
+                  SM
+                </a>
+                            <a href="#" class="btn btn-outline-secondary disabled">
+                  S
+                </a>
+                            <a href="#" class="btn btn-outline-secondary">
+                  L
+                </a>
+                            <a href="#" class="btn btn-outline-secondary disabled">
+                  XL
+                </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card border-0 box-shadow text-center h-100">
+                    <img src="https://images.unsplash.com/photo-1488684430052-f2d92fb178c2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80" class="card-img-top" alt="..." />
+                    <div class="card-body">
+                        <h5 class="card-title">影音飾品</h5>
+                        <p class="card-text">
+                            This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.
+                        </p>
+                    </div>
+                    <div class="card-footer border-top-0 bg-white">
+                        <div class="btn-group" role="group" aria-label="Basic example" aria-disabled="true">
+                            <a href="#" class="btn btn-outline-secondary disabled">
+                  缺貨中!
+                </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="tab-pane" id="paw" role="tabpanel">
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card border-0 box-shadow text-center h-100">
+                    <img src="https://images.unsplash.com/photo-1501602706752-d63d1276829b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" class="card-img-top" alt="..." />
+                    <div class="card-body">
+                        <h5 class="card-title">寵物幸福</h5>
+                        <p class="card-text">
+                            This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                        </p>
+                    </div>
+                    <div class="card-footer border-top-0 bg-white">
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                            <a href="#" class="btn btn-outline-secondary">
+                  SM
+                </a>
+                            <a href="#" class="btn btn-outline-secondary">
+                  S
+                </a>
+                            <a href="#" class="btn btn-outline-secondary">
+                  L
+                </a>
+                            <a href="#" class="btn btn-outline-secondary">
+                  XL
+                </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card border-0 box-shadow text-center h-100">
+                    <img src="https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80" class="card-img-top" alt="..." />
+                    <div class="card-body">
+                        <h5 class="card-title">寵物戀愛</h5>
+                        <p class="card-text">
+                            This card has supporting text below as a natural lead-in to additional content.
+                        </p>
+                    </div>
+                    <div class="card-footer border-top-0 bg-white">
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                            <a href="#" class="btn btn-outline-secondary">
+                  SM
+                </a>
+                            <a href="#" class="btn btn-outline-secondary">
+                  S
+                </a>
+                            <a href="#" class="btn btn-outline-secondary">
+                  L
+                </a>
+                            <a href="#" class="btn btn-outline-secondary">
+                  XL
+                </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card border-0 box-shadow text-center h-100">
+                    <img src="https://images.unsplash.com/photo-1542765826-d17aa264390d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1353&q=80" class="card-img-top" alt="..." />
+                    <div class="card-body">
+                        <h5 class="card-title">寵物當家</h5>
+                        <p class="card-text">
+                            This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.
+                        </p>
+                    </div>
+                    <div class="card-footer border-top-0 bg-white">
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                            <a href="#" class="btn btn-outline-secondary btn-block">
+                  搶購去
+                </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card border-0 box-shadow text-center h-100">
+                    <img src="https://images.unsplash.com/photo-1562860394-2c482562469d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1355&q=80" class="card-img-top" alt="..." />
+                    <div class="card-body">
+                        <h5 class="card-title">寵物愛睏</h5>
+                        <p class="card-text">
+                            This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.
+                        </p>
+                    </div>
+                    <div class="card-footer border-top-0 bg-white">
+                        <div class="btn-group" role="group" aria-label="Basic example" aria-disabled="true">
+                            <a href="#" class="btn btn-outline-secondary">
+                  SM
+                </a>
+                            <a href="#" class="btn btn-outline-secondary disabled">
+                  S
+                </a>
+                            <a href="#" class="btn btn-outline-secondary">
+                  L
+                </a>
+                            <a href="#" class="btn btn-outline-secondary disabled">
+                  XL
+                </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card border-0 box-shadow text-center h-100">
+                    <img src="https://images.unsplash.com/photo-1558378566-c49e2a6cc01c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" class="card-img-top" alt="..." />
+                    <div class="card-body">
+                        <h5 class="card-title">寵物飾品</h5>
+                        <p class="card-text">
+                            This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.
+                        </p>
+                    </div>
+                    <div class="card-footer border-top-0 bg-white">
+                        <div class="btn-group" role="group" aria-label="Basic example" aria-disabled="true">
+                            <a href="#" class="btn btn-outline-secondary disabled">
+                  缺貨中!
+                </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane" id="home" role="tabpanel">
+
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card border-0 box-shadow text-center h-100">
+                    <img src="https://images.unsplash.com/photo-1488805990569-3c9e1d76d51c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="card-img-top" alt="..." />
+                    <div class="card-body">
+                        <h5 class="card-title">居家幸福</h5>
+                        <p class="card-text">
+                            This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                        </p>
+                    </div>
+                    <div class="card-footer border-top-0 bg-white">
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                            <a href="#" class="btn btn-outline-secondary">
+              SM
+            </a>
+                            <a href="#" class="btn btn-outline-secondary">
+              S
+            </a>
+                            <a href="#" class="btn btn-outline-secondary">
+              L
+            </a>
+                            <a href="#" class="btn btn-outline-secondary">
+              XL
+            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card border-0 box-shadow text-center h-100">
+                    <img src="https://images.unsplash.com/photo-1547110287-71448271b1de?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80" class="card-img-top" alt="..." />
+                    <div class="card-body">
+                        <h5 class="card-title">居家服飾</h5>
+                        <p class="card-text">
+                            This card has supporting text below as a natural lead-in to additional content.
+                        </p>
+                    </div>
+                    <div class="card-footer border-top-0 bg-white">
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                            <a href="#" class="btn btn-outline-secondary">
+              SM
+            </a>
+                            <a href="#" class="btn btn-outline-secondary">
+              S
+            </a>
+                            <a href="#" class="btn btn-outline-secondary">
+              L
+            </a>
+                            <a href="#" class="btn btn-outline-secondary">
+              XL
+            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card border-0 box-shadow text-center h-100">
+                    <img src="https://images.unsplash.com/photo-1503174971373-b1f69850bded?ixlib=rb-1.2.1&auto=format&fit=crop&w=1387&q=80" class="card-img-top" alt="..." />
+                    <div class="card-body">
+                        <h5 class="card-title">居家環境</h5>
+                        <p class="card-text">
+                            This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.
+                        </p>
+                    </div>
+                    <div class="card-footer border-top-0 bg-white">
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                            <a href="#" class="btn btn-outline-secondary btn-block">
+              搶購去
+            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card border-0 box-shadow text-center h-100">
+                    <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" class="card-img-top" alt="..." />
+                    <div class="card-body">
+                        <h5 class="card-title">居家景色</h5>
+                        <p class="card-text">
+                            This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.
+                        </p>
+                    </div>
+                    <div class="card-footer border-top-0 bg-white">
+                        <div class="btn-group" role="group" aria-label="Basic example" aria-disabled="true">
+                            <a href="#" class="btn btn-outline-secondary">
+              SM
+            </a>
+                            <a href="#" class="btn btn-outline-secondary disabled">
+              S
+            </a>
+                            <a href="#" class="btn btn-outline-secondary">
+              L
+            </a>
+                            <a href="#" class="btn btn-outline-secondary disabled">
+              XL
+            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card border-0 box-shadow text-center h-100">
+                    <img src="https://images.unsplash.com/photo-1551029118-d3c293a67c0e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1428&q=80" class="card-img-top" alt="..." />
+                    <div class="card-body">
+                        <h5 class="card-title">居家飾品</h5>
+                        <p class="card-text">
+                            This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.
+                        </p>
+                    </div>
+                    <div class="card-footer border-top-0 bg-white">
+                        <div class="btn-group" role="group" aria-label="Basic example" aria-disabled="true">
+                            <a href="#" class="btn btn-outline-secondary disabled">
+              缺貨中!
+            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <footer class="bg-light py-4 mt-4">
+        <div class="container d-flex justify-content-center">
+            <div class="mx-1">© Copright 2017 彬彬血拼賣賣 </div>
+
+
+            <div class="mx-1">
+
+                <a class="text-hexschool text-secondary" href="#"><i class="fab fa-facebook"></i></a>
+                <a class="text-hexschool text-secondary" href="#"><i class="fab fa-youtube"></i></a>
+                <a class="text-hexschool text-secondary" href="#"><i class="fab fa-line"></i></a>
+            </div>
+        </div>
+        <div class="text-center">
+            Made with Bootstrap4
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal fade" id="delModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-danger text-white">
+                    <h5 class="modal-title" id="exampleModalLabel">刪除</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+                </div>
+                <div class="modal-body">
+                    <p>是否確定要刪除商品</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">
+                        否
+                      </button>
+                    <button type="button" class="btn btn-outline-danger" data-dismiss="modal">
+              是
+            </button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://kit.fontawesome.com/422d81ea40.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function() {
+            $('a[data-toggle="modal"][data-dismiss="modal"]').on(
+                "click",
+                function() {
+                    var target = $(this).data("target");
+                    $(target).on("shown.bs.modal", function() {
+                        $("body").addClass("modal-open");
+                    });
+                }
+            );
+        });
+
+        // <a href="#" class="mr-auto" data-dismiss="modal" data-toggle="modal" data-target="#delModal">
+    </script>
+</body>
+
+</html>
